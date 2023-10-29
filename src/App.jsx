@@ -30,7 +30,6 @@ export default function App() {
   function darkMode() {
     if (flag1) {
       stateChanger("#fff", "#000", <i className="bi bi-moon"></i>, "#000");
-      flag1 = false;
     } else {
       stateChanger(
         "#000",
@@ -38,8 +37,8 @@ export default function App() {
         <i className="bi bi-brightness-high-fill"></i>,
         "#fff",
       );
-      flag1 = true;
     }
+    flag1 = !flag1
   }
 
   useEffect(() => {
