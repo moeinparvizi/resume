@@ -9,7 +9,9 @@ export default function App() {
   const [darkModeState, setDarkModeState] = useState({
     profileBgColor: "#000",
     profileTextColor: "#fff",
-    mainButtonText: <i className="bi bi-brightness-high-fill"></i>,
+    mainButtonText: (
+      <i className="bi bi-brightness-high-fill grid place-items-center"></i>
+    ),
     mainButtonColor: "#fff",
   });
   // const [flag, setFlag] = useState(true);
@@ -29,16 +31,21 @@ export default function App() {
   let flag1 = true;
   function darkMode() {
     if (flag1) {
-      stateChanger("#fff", "#000", <i className="bi bi-moon"></i>, "#000");
+      stateChanger(
+        "#fff",
+        "#000",
+        <i className="bi bi-moon grid place-items-center"></i>,
+        "#000",
+      );
     } else {
       stateChanger(
         "#000",
         "#fff",
-        <i className="bi bi-brightness-high-fill"></i>,
+        <i className="bi bi-brightness-high-fill grid place-items-center"></i>,
         "#fff",
       );
     }
-    flag1 = !flag1
+    flag1 = !flag1;
   }
 
   useEffect(() => {
@@ -51,13 +58,11 @@ export default function App() {
 
   return (
     <Fragment>
-      <div className="setting absolute w-screen flex justify-between items-center p-3">
-        {/* Components */}
-        <Theme
-          mainText={darkModeState.mainButtonText}
-          mainColor={darkModeState.mainButtonColor}
-        />
-      </div>
+      {/* Components */}
+      <Theme
+        mainText={darkModeState.mainButtonText}
+        mainColor={darkModeState.mainButtonColor}
+      />
 
       <main className="flex flex-wrap w-full">
         <section
