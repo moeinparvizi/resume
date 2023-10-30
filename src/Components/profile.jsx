@@ -27,7 +27,8 @@ import me from '../assets/images/me.jpeg'
 //   },
 // };
 
-export default function Profile() {
+export default function Profile({glassColor}) {
+  console.log(glassColor)
   return (
     <div className='flex flex-col'>
 
@@ -38,7 +39,7 @@ export default function Profile() {
         </figcaption>
       </figure>
 
-      <div className='flex flex-col mt-20 w-full [&>div]:border-b rounded-lg glass p-2'>
+      <div style={{backgroundColor:glassColor,transition:'2s'}} className='flex flex-col mt-15 w-full [&>div]:border-b rounded-lg glass p-2'>
         <div className='flex items-center justify-between p-2 text-[16px] md:text-[18px]'>
           <div className='capitalize font-bold'>call</div>
           <div>
@@ -54,7 +55,7 @@ export default function Profile() {
         <div className='flex items-center justify-between p-2 text-[16px] md:text-[18px]'>
           <div className='capitalize font-bold'>web</div>
           <div>
-            <a rel='noreferrer' target='_blank' href="https://moeinparvizi.github.io/personal-website">https://moeinparvizi.github.io/personal-website</a>
+            <a rel='noreferrer' target='_blank' href="https://moeinparvizi.github.io/personal-website">personal website</a>
           </div>
         </div>
         <div className='flex items-center justify-between p-2 text-[16px] md:text-[18px] !mb-0 !border-none'>

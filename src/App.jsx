@@ -27,12 +27,13 @@ export default function App() {
       <i className="bi bi-brightness-high-fill grid place-items-center"></i>
     ),
     mainButtonColor: color.white,
-    profileImageBg: backgroundImageDark
+    profileImageBg: backgroundImageDark,
+    profileGlassColor: 'rgba(0,0,0,0.2)'
   });
   // const [flag, setFlag] = useState(true);
 
   // changer darkModeState function
-  function stateChanger(profileBgC, profileTextC, mainButtonT, mainButtonC, profileBg) {
+  function stateChanger(profileBgC, profileTextC, mainButtonT, mainButtonC, profileBg, glassColor) {
     setDarkModeState({
       ...darkModeState,
       profileBgColor: profileBgC,
@@ -40,6 +41,7 @@ export default function App() {
       mainButtonText: mainButtonT,
       mainButtonColor: mainButtonC,
       profileImageBg : profileBg,
+      profileGlassColor: glassColor,
     });
   }
 
@@ -52,7 +54,8 @@ export default function App() {
         color.black,
         <i className="bi bi-moon grid place-items-center"></i>,
         color.black,
-        backgroundImageLight
+        backgroundImageLight,
+        'rgba(255,255,255,0.2)'
       );
     } else {
       stateChanger(
@@ -60,7 +63,8 @@ export default function App() {
         color.white,
         <i className="bi bi-brightness-high-fill grid place-items-center"></i>,
         color.white,
-        backgroundImageDark
+        backgroundImageDark,
+        'rgba(0,0,0,0.2)'
       );
     }
     flag1 = !flag1;
@@ -84,15 +88,19 @@ export default function App() {
       {/* Component for change language */}
       <Lang />
 
-      <main className="flex flex-wrap w-full">
-        <section
-          style={
-            {
-              transition: '1s',
+      <main className="flex flex-wrap w-full" style={{
+        transition: '1s',
               backgroundImage:'url('+darkModeState.profileImageBg+')',
-              backgroundPosition: '90% 50%',
-            }
-          }
+              backgroundPosition: '100% 40%',
+      }}>
+        <section
+          // style={
+          //   {
+          //     transition: '1s',
+          //     backgroundImage:'url('+darkModeState.profileImageBg+')',
+          //     backgroundPosition: '90% 50%',
+          //   }
+          // }
           className={
             "flex p-9 pt-20 flex-col w-full md:w-[40%] profile h-screen text-[" +
             darkModeState.profileTextColor +
@@ -102,9 +110,9 @@ export default function App() {
           }
         >
           {/* Components show profile */}
-          <Profile />
+          <Profile glassColor={darkModeState.profileGlassColor} />
         </section>
-        <section className={"w-full md:w-[60%] h-screen bg-[#2d2d] p-9 pt-20"}>
+       <section className={"w-full md:w-[60%] h-screen p-9 pt-20 border"}>
           {/* Components show more information */}
           <More />
         </section>
