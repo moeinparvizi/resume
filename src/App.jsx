@@ -1,6 +1,7 @@
 import Profile from "./Components/profile";
 import More from "./Components/more";
 import Theme from "./Components/theme";
+import Lang from "./Components/Language"
 import { Fragment, useEffect } from "react";
 import { useState } from "react";
 
@@ -58,11 +59,13 @@ export default function App() {
 
   return (
     <Fragment>
-      {/* Components */}
+      {/* Components for theme */}
       <Theme
         mainText={darkModeState.mainButtonText}
         mainColor={darkModeState.mainButtonColor}
       />
+      {/* Component for change language */}
+      <Lang />
 
       <main className="flex flex-wrap w-full">
         <section
@@ -74,11 +77,11 @@ export default function App() {
             "] p-9 pt-20"
           }
         >
-          {/* Components */}
+          {/* Components show profile */}
           <Profile />
         </section>
         <section className={"w-full md:w-[60%] h-screen bg-[#2d2d] p-9 pt-20"}>
-          {/* Components */}
+          {/* Components show more information */}
           <More />
         </section>
       </main>
