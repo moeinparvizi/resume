@@ -1,0 +1,20 @@
+@font-face {
+    font-family: metal;
+    src: url('../fonts/MetalMania-Regular.ttf');
+}
+@font-face {
+    font-family: acma;
+    src: url('../fonts/Acme-Regular.ttf');
+}
+body {
+    font-family: acma;
+}
+.moeinparvizi {
+    background: #9E2A2B;
+    background: linear-gradient(to right, #9E2A2B 0%, #335C67 49%, #FFF3B0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: metal;
+    font-size: 50px;
+    font-weight: bold;
+}

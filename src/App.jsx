@@ -6,6 +6,18 @@ import { Fragment, useEffect } from "react";
 import { useState } from "react";
 
 export default function App() {
+  //colors variable
+  const color = {
+    lightColor:'#FFF3B0',
+    black: '#000',
+    white: '#eee',
+    pink: '#e2e',
+    orange: '#E09F3E',
+    blue: '#335C67',
+    red: '#9E2A2B',
+    redChocolate : '#FFF3B0',
+  }
+  const lightColor = '#FFF3B0'
   // state for colors
   const [darkModeState, setDarkModeState] = useState({
     profileBgColor: "#000",
@@ -33,17 +45,17 @@ export default function App() {
   function darkMode() {
     if (flag1) {
       stateChanger(
-        "#fff",
-        "#000",
+        color.lightColor,
+        color.black,
         <i className="bi bi-moon grid place-items-center"></i>,
-        "#000",
+        color.black,
       );
     } else {
       stateChanger(
-        "#000",
-        "#fff",
+        color.black,
+        color.white,
         <i className="bi bi-brightness-high-fill grid place-items-center"></i>,
-        "#fff",
+        color.white,
       );
     }
     flag1 = !flag1;
