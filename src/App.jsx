@@ -88,7 +88,7 @@ export default function App() {
       {/* Component for change language */}
       <Lang />
 
-      <main className="flex flex-wrap w-full" style={{
+      <main className="flex flex-wrap w-full overflow-hidden" style={{
         transition: '1s',
               backgroundImage:'url('+darkModeState.profileImageBg+')',
               backgroundPosition: '100% 40%',
@@ -111,6 +111,7 @@ export default function App() {
         >
           {/* Components show profile */}
           <Profile glassColor={darkModeState.profileGlassColor} />
+          {console.log(darkModeState.profileGlassColor)}
         </section>
        <section className={"w-full md:w-[60%] h-screen p-9 pt-20 border"}>
           {/* Components show more information */}
