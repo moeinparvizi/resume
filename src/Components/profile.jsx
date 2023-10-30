@@ -74,7 +74,7 @@ function About({ glassColor }) {
       }}
       className="glass mt-10 md:mt-20 p-5"
     >
-      <h4 className="capitalize font-bold moeinparvizi !text-[20px] md:!text-[35px]">
+      <h4 className="capitalize text-center font-bold moeinparvizi !text-[20px] md:!text-[35px]">
         about me
       </h4>
       <p className="text-[15px] md:text-[18px]">
@@ -96,9 +96,17 @@ function Social({ glassColor }) {
       }}
       className="glass mt-10 md:mt-20 p-5 flex justify-evenly items-center text-[30px]"
     >
-      <i className="bi bi-github"></i>
-      <i className="bi bi-instagram"></i>
-      <i className="bi bi-linkedin"></i>
+      <i
+        className="bi bi-github cursor-pointer"
+        href="https://github.com/moeinparvizi"
+      ></i>
+      <i
+        className="bi bi-instagram cursor-pointer"
+        href="https://instagram.com/moeinparvizi.dev"
+      ></i>
+      <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/moeinparvizi2002">
+        <i className="bi bi-linkedin cursor-pointer"></i>
+      </a>
     </div>
   );
 }
