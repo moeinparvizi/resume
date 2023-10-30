@@ -1,15 +1,18 @@
 import me from "../assets/images/me.jpeg";
 
-function Me() {
+function Me({ glassColor }) {
   return (
-    <figure className="flex flex-wrap justify-center items-center mb-5">
+    <figure
+      className="flex flex-wrap justify-center items-center p-3 mb-5 rounded-2xl glass shadow-2xl"
+      style={{ backgroundColor: glassColor, transition: "2s" }}
+    >
       <img
-        className="m-2 rounded-full w-20 h-20 md:w-52 md:h-52"
+        className="shadow-2x m-2 rounded-full w-20 h-20 md:w-52 md:h-52"
         src={me}
         alt="my picture"
       />
       <figcaption className="m-2">
-        <h1 className="moeinparvizi !text-[25px] md:text-[40px]">
+        <h1 className="moeinparvizi !text-[25px] md:!text-[60px]">
           moein parvizi
         </h1>
       </figcaption>
@@ -62,7 +65,7 @@ function Info({ glassColor }) {
   );
 }
 
-function About({glassColor}) {
+function About({ glassColor }) {
   return (
     <div
       style={{
@@ -84,7 +87,7 @@ function About({glassColor}) {
   );
 }
 
-function Social({glassColor}) {
+function Social({ glassColor }) {
   return (
     <div
       style={{
@@ -97,20 +100,19 @@ function Social({glassColor}) {
       <i className="bi bi-instagram"></i>
       <i className="bi bi-linkedin"></i>
     </div>
-  )
+  );
 }
 
 export default function Profile({ glassColor }) {
   return (
     <div className="flex flex-col">
-      <Me />
+      <Me glassColor={glassColor} />
 
       <Info glassColor={glassColor}></Info>
 
       <About glassColor={glassColor}></About>
 
       <Social glassColor={glassColor} />
-
     </div>
   );
 }
