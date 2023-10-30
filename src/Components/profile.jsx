@@ -38,11 +38,29 @@ export default function Profile() {
         </figcaption>
       </figure>
 
-      <div className='flex flex-col mt-20'>
-        <div className='flex items-center justify-center text-[16px] md:text-[18px]'>
-          <div className='me-40 lg:me-52 xl:me-80 capitalize font-bold'>call</div>
+      <div className='flex flex-col mt-20 w-full [&>div]:border-b rounded-lg glass p-2'>
+        <div className='flex items-center justify-between p-2 text-[16px] md:text-[18px]'>
+          <div className='capitalize font-bold'>call</div>
           <div>
-            <a className='no-underline' href="tel:+989226756339">+989226756339</a>
+            <a className='' href="tel:+989226756339">+989226756339</a>
+          </div>
+        </div>
+        <div className='flex items-center justify-between p-2 text-[16px] md:text-[18px]'>
+          <div className='capitalize font-bold'>call</div>
+          <div>
+            <a className='' href="mail:giventulip@gmail.com">giventulip@gmail.com</a>
+          </div>
+        </div>
+        <div className='flex items-center justify-between p-2 text-[16px] md:text-[18px]'>
+          <div className='capitalize font-bold'>web</div>
+          <div>
+            <a rel='noreferrer' target='_blank' href="https://moeinparvizi.github.io/personal-website">https://moeinparvizi.github.io/personal-website</a>
+          </div>
+        </div>
+        <div className='flex items-center justify-between p-2 text-[16px] md:text-[18px] !mb-0 !border-none'>
+          <div className='capitalize font-bold'>home</div>
+          <div>
+            Tehran, IR
           </div>
         </div>
       </div>

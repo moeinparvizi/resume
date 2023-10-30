@@ -2,13 +2,16 @@
     font-family: metal;
     src: url('../fonts/MetalMania-Regular.ttf');
 }
+
 @font-face {
     font-family: acma;
     src: url('../fonts/Acme-Regular.ttf');
 }
+
 body {
     font-family: acma;
 }
+
 .moeinparvizi {
     background: #9E2A2B;
     background: linear-gradient(to right, #9E2A2B 0%, #335C67 49%, #FFF3B0 100%);
@@ -17,4 +20,14 @@ body {
     font-family: metal;
     font-size: 50px;
     font-weight: bold;
+}
+
+.glass {
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }

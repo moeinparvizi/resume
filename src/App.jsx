@@ -4,6 +4,8 @@ import Theme from "./Components/theme";
 import Lang from "./Components/Language"
 import { Fragment, useEffect } from "react";
 import { useState } from "react";
+import backgroundImageDark from "./assets/images/profilebackground/dark.png"
+import backgroundImageLight from "./assets/images/profilebackground/light.png"
 
 export default function App() {
   //colors variable
@@ -17,26 +19,27 @@ export default function App() {
     red: '#9E2A2B',
     redChocolate : '#FFF3B0',
   }
-  const lightColor = '#FFF3B0'
   // state for colors
   const [darkModeState, setDarkModeState] = useState({
-    profileBgColor: "#000",
-    profileTextColor: "#fff",
+    profileBgColor: color.black,
+    profileTextColor: color.white,
     mainButtonText: (
       <i className="bi bi-brightness-high-fill grid place-items-center"></i>
     ),
-    mainButtonColor: "#fff",
+    mainButtonColor: color.white,
+    profileImageBg: backgroundImageDark
   });
   // const [flag, setFlag] = useState(true);
 
   // changer darkModeState function
-  function stateChanger(profileBGC, profileTextC, mainButtonT, mainButtonC) {
+  function stateChanger(profileBgC, profileTextC, mainButtonT, mainButtonC, profileBg) {
     setDarkModeState({
       ...darkModeState,
-      profileBgColor: profileBGC,
+      profileBgColor: profileBgC,
       profileTextColor: profileTextC,
       mainButtonText: mainButtonT,
       mainButtonColor: mainButtonC,
+      profileImageBg : profileBg,
     });
   }
 
@@ -49,6 +52,7 @@ export default function App() {
         color.black,
         <i className="bi bi-moon grid place-items-center"></i>,
         color.black,
+        backgroundImageLight
       );
     } else {
       stateChanger(
@@ -56,6 +60,7 @@ export default function App() {
         color.white,
         <i className="bi bi-brightness-high-fill grid place-items-center"></i>,
         color.white,
+        backgroundImageDark
       );
     }
     flag1 = !flag1;
@@ -81,12 +86,19 @@ export default function App() {
 
       <main className="flex flex-wrap w-full">
         <section
+          style={
+            {
+              transition: '1s',
+              backgroundImage:'url('+darkModeState.profileImageBg+')',
+              backgroundPosition: '90% 50%',
+            }
+          }
           className={
-            "flex flex-col w-full md:w-[40%] h-screen text-[" +
+            "flex p-9 pt-20 flex-col w-full md:w-[40%] profile h-screen text-[" +
             darkModeState.profileTextColor +
-            "] bg-[" +
-            darkModeState.profileBgColor +
-            "] p-9 pt-20"
+            "] bg-[" //+
+            // darkModeState.profileBgColor +
+            // "]"
           }
         >
           {/* Components show profile */}
