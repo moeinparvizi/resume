@@ -13,7 +13,7 @@ export default function More({ glassColor }) {
         <ul className="[&>li]:mb-5 [&>li>h4]:border-b [&>li>h4]:font-bold [&>li>h4]:text-[18px]">
           <li>
             <h4>languages</h4>
-            <ul className="flex [&>li]:p-5">
+            <ul className="flex [&>li]:p-5 flex-wrap">
               <li className="list-none">html</li>
               <li className="list-none">css</li>
               <li className="list-none">sass</li>
@@ -40,7 +40,7 @@ export default function More({ glassColor }) {
           </li>
           <li>
             <h4>applications</h4>
-            <ul className="flex [&>li]:p-5">
+            <ul className="flex [&>li]:p-5 flex-wrap">
               <li className="list-none">photoshop</li>
               <li className="list-none">figma</li>
             </ul>

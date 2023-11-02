@@ -72,7 +72,7 @@ function About({ glassColor }) {
         backgroundColor: glassColor,
         transition: "2s",
       }}
-      className="glass mt-10 md:mt-20 p-5"
+      className="glass mt-10 md:mt-10 p-5"
     >
       <h4 className="capitalize text-center font-bold moeinparvizi !text-[20px] md:!text-[35px]">
         about me
@@ -94,7 +94,7 @@ function Social({ glassColor }) {
         backgroundColor: glassColor,
         transition: "2s",
       }}
-      className="glass mt-10 md:mt-20 p-5 flex justify-evenly items-center text-[30px]"
+      className="glass mt-10 md:mt-10 p-5 flex justify-evenly items-center text-[30px]"
     >
       <i
         className="bi bi-github cursor-pointer"

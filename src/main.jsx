@@ -5,11 +5,10 @@ import App from './App.jsx'
 // import css
 import "./assets/css/style.css"
 
-
 function Main() {
   return(
     <React.StrictMode>
-      <App />
+        <App />
     </React.StrictMode>
   )
 }
