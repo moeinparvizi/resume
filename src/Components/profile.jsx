@@ -38,7 +38,7 @@ function Info({ glassColor }) {
         </div>
       </div>
       <div className="flex items-center justify-between p-2 text-[16px] md:text-[18px]">
-        <div className="capitalize font-bold">call</div>
+        <div className="capitalize font-bold">mail</div>
         <div>
           <a className="" href="mail:giventulip@gmail.com">
             giventulip@gmail.com
