@@ -100,7 +100,7 @@ a resume build with react and tailwind css
 * [![CSS3][CSS3]][CSS3]
 * [![TailwindCSS][TailwindCSS]][TailwindCSS]
 * [![JavaScript][JavaScript]][JavaScript]
-* [![React.js][Raact.js]][React-url]
+* [![React.js][Raact.js]][React.js]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
