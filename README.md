@@ -26,7 +26,7 @@ moein parvizi
     <a href="https://github.com/moeinparvizi/resume"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://moeinparvizi.github.io/resume/">View Demo</a>
+    <a href="https://resume-alpha-peach.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/moeinparvizi/resume/issues">Report Bug</a>
     ·
