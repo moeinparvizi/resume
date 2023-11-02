@@ -66,7 +66,7 @@ moein parvizi
 ## About The Project
 
 ![Screenshot from 2023-11-02 15-49-01](https://github.com/moeinparvizi/resume/assets/38692466/4599df68-c5da-4793-87a6-8c5a2619c754)
-![Screenshot from 2023-11-02 15-49-01](https://github.com/moeinparvizi/resume/assets/38692466/f24bfd4f-1575-409b-bd79-255cca635dc8)
+![Screenshot from 2023-11-02 15-49-10](https://github.com/moeinparvizi/resume/assets/38692466/c7b74081-081f-4441-894e-fbc68fc2ec68)
 
 Hints :
 * first project with react
