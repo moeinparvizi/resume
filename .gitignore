@@ -10,7 +10,7 @@ lerna-debug.log*
 node_modules
 tailwind.config.js
 .vscode
-dist
+# dist
 dist-ssr
 *.local
 
