@@ -7,12 +7,12 @@ function Me({ glassColor }) {
       style={{ backgroundColor: glassColor, transition: "2s" }}
     >
       <img
-        className="shadow-2x m-2 rounded-full w-20 h-20 md:w-52 md:h-52"
+        className="my-face shadow-2x m-2 rounded-full w-20 h-20 md:w-52 md:h-52"
         src={me}
         alt="my picture"
       />
       <figcaption className="m-2">
-        <h1 className="moeinparvizi !text-[25px] md:!text-[60px]">
+        <h1 className="my-name moeinparvizi !text-[25px] md:!text-[60px]">
           moein parvizi
         </h1>
       </figcaption>

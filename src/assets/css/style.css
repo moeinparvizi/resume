@@ -28,3 +28,13 @@ body {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
+/* responsive mode */
+/* @media only screen and (max-height:1030px) {
+    .my-face{
+        width: 70px;
+        height: 70px;
+    }
+    .my-name{
+        font-size: 30px;
+    }
+} */

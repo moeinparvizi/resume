@@ -100,7 +100,7 @@ export default function App() {
       <Lang />
 
       <main
-        className="flex flex-wrap w-full overflow-hidden lg:h-screen"
+        className="flex flex-wrap w-full min-h-screen"
         style={{
           transition: "1s",
           backgroundImage: "url(" + darkModeState.profileImageBg + ")",
