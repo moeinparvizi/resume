@@ -30,7 +30,7 @@ export default function App() {
     profileImageBg: backgroundImageDark,
     profileGlassColor: "rgba(0,0,0,0.2)",
   });
-  // const [flag, setFlag] = useState(true);
+  const [flag, setFlag] = useState(true);
 
   // changer darkModeState function
   function stateChanger(
@@ -53,9 +53,10 @@ export default function App() {
   }
 
   // dark mode click
-  let flag1 = true;
+  // let flag1 = true;
   function darkMode() {
-    if (flag1) {
+    if (flag) {
+      setFlag(false)
       stateChanger(
         color.lightColor,
         color.black,
@@ -65,6 +66,7 @@ export default function App() {
         "rgba(255,255,255,0.2)",
       );
     } else {
+      setFlag(true)
       stateChanger(
         color.black,
         color.white,
@@ -73,17 +75,18 @@ export default function App() {
         backgroundImageDark,
         "rgba(0,0,0,0.2)",
       );
+      // flag1 == true
     }
-    flag1 = !flag1;
+    // flag1 = !flag1;
   }
 
-  useEffect(() => {
-    return () => {
-      document
-        .querySelector(".theme-changer")
-        .addEventListener("click", darkMode);
-    };
-  }, []);
+  // useEffect(() => {
+  //   return () => {
+  //     document
+  //       .querySelector(".theme-changer")
+  //       .addEventListener("click", darkMode);
+  //   };
+  // }, []);
 
   return (
     <Fragment>
@@ -91,6 +94,7 @@ export default function App() {
       <Theme
         mainText={darkModeState.mainButtonText}
         mainColor={darkModeState.mainButtonColor}
+        darkMode={darkMode}
       />
       {/* Component for change language */}
       <Lang />
